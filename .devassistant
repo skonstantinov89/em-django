@@ -1,0 +1,18 @@
+dependencies:
+- rpm:
+  - !!python/unicode 'python'
+- if $venv and not $py3:
+  - rpm:
+    - python-virtualenv
+- if not $venv:
+  - rpm:
+    - python${py3}-django
+devassistant_version: 0.9.3
+original_kwargs:
+  github: !!python/unicode 'skonstantinov89'
+  name: !!python/unicode '/home/jovial/Projects/em-django'
+  py3: !!python/unicode ''
+  venv: !!python/unicode ''
+project_type:
+- python
+- django
